@@ -1,0 +1,15 @@
+services:
+  web-check:
+    container_name: osint-web-check
+    image: lissy93/web-check
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      CHROME_PATH: /usr/bin/chromium #optional but needed for screenshots
+      GOOGLE_CLOUD_API_KEY: #optional - API key goes here
+      TORRENT_IP_API_KEY: #optional - API key goes here
+      REACT_APP_SHODAN_API_KEY: #optional - API key goes here
+      REACT_APP_WHO_API_KEY: #optional - API key goes here
+      SECURITY_TRAILS_API_KEY: #optional - API key goes here
+      BUILT_WITH_API_KEY: #optional - API key goes here
